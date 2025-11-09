@@ -116,11 +116,6 @@ const translations = {
         'exp.cipher.li4': 'Desarrollo con servicios AWS: S3, DynamoDB, Lambda, Step Functions, Athena',
         'exp.cipher.li5': 'Desarrollo de aplicaciones web con Python y Django',
         'exp.cipher.li6': 'Uso de herramientas DevOps: Git, Docker, Bitbucket, Jira, Confluence',
-        'exp.eulen.date': '2018 - 2021',
-        'exp.eulen.title': 'Vigilante de Seguridad',
-        'exp.eulen.li1': 'Control de accesos y vigilancia de instalaciones',
-        'exp.eulen.li2': 'Gestión de incidencias de seguridad',
-        'exp.eulen.li3': 'Coordinación con equipos de seguridad',
         
         // Educación
         'edu.title': 'Educación',
@@ -260,11 +255,6 @@ const translations = {
         'exp.cipher.li4': 'Development with AWS services: S3, DynamoDB, Lambda, Step Functions, Athena',
         'exp.cipher.li5': 'Web application development with Python and Django',
         'exp.cipher.li6': 'DevOps tools usage: Git, Docker, Bitbucket, Jira, Confluence',
-        'exp.eulen.date': '2018 - 2021',
-        'exp.eulen.title': 'Security Guard',
-        'exp.eulen.li1': 'Access control and facility surveillance',
-        'exp.eulen.li2': 'Security incident management',
-        'exp.eulen.li3': 'Coordination with security teams',
         
         // Education
         'edu.title': 'Education',
