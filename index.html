@@ -19,18 +19,29 @@
     <!-- Navegación -->
     <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="nav-brand">DRE</div>
+            <div class="nav-brand">
+                <img src="assets/images/foto-perfil.jpg" alt="Daniel Rico Esteban" class="nav-profile-img">
+                <span>DRE</span>
+            </div>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
-                <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
-                <li><a href="#educacion" class="nav-link">Educación</a></li>
-                <li><a href="#certificaciones" class="nav-link">Certificaciones</a></li>
-                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-                <li><a href="#idiomas" class="nav-link">Idiomas</a></li>
-                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="#inicio" class="nav-link" data-i18n="nav.inicio">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link" data-i18n="nav.sobre-mi">Sobre Mí</a></li>
+                <li><a href="#experiencia" class="nav-link" data-i18n="nav.experiencia">Experiencia</a></li>
+                <li><a href="#educacion" class="nav-link" data-i18n="nav.educacion">Educación</a></li>
+                <li><a href="#certificaciones" class="nav-link" data-i18n="nav.certificaciones">Certificaciones</a></li>
+                <li><a href="#habilidades" class="nav-link" data-i18n="nav.habilidades">Habilidades</a></li>
+                <li><a href="#idiomas" class="nav-link" data-i18n="nav.idiomas">Idiomas</a></li>
+                <li><a href="#proyectos" class="nav-link" data-i18n="nav.proyectos">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-link" data-i18n="nav.contacto">Contacto</a></li>
             </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" title="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="lang-toggle" id="lang-toggle" title="Change language">
+                    <span class="lang-text">EN</span>
+                </button>
+            </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -44,20 +55,20 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text" data-aos="fade-right">
-                    <h1 class="hero-title">
+                    <h1 class="hero-title" data-i18n="hero.title">
                         DANIEL RICO ESTEBAN
                     </h1>
-                    <p class="hero-subtitle">Senior Cloud DevOps Engineer | AWS & Azure Specialist</p>
-                    <p class="hero-description">
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">Senior Cloud DevOps Engineer | AWS & Azure Specialist</p>
+                    <p class="hero-description" data-i18n="hero.description">
                         Especialista en Cloud Computing (AWS y Azure), DevOps y Ciberseguridad con amplia experiencia 
                         en automatización de procesos, CI/CD y gestión de infraestructura en la nube.
                     </p>
                     <div class="hero-buttons">
                         <a href="#contacto" class="btn btn-primary">
-                            <i class="fas fa-envelope"></i> Contáctame
+                            <i class="fas fa-envelope"></i> <span data-i18n="hero.btn.contact">Contáctame</span>
                         </a>
                         <a href="#proyectos" class="btn btn-secondary">
-                            <i class="fas fa-briefcase"></i> Ver Proyectos
+                            <i class="fas fa-briefcase"></i> <span data-i18n="hero.btn.projects">Ver Proyectos</span>
                         </a>
                     </div>
                     <div class="social-links">
@@ -78,12 +89,12 @@
                 <div class="hero-image" data-aos="fade-left">
                     <div class="profile-card">
                         <div class="profile-image">
-                            <img src="foto-perfil.jpg" alt="Daniel Rico Esteban">
+                            <img src="assets/images/foto-perfil.jpg" alt="Daniel Rico Esteban">
                             <div class="profile-ring"></div>
                         </div>
                         <div class="profile-status">
                             <span class="status-dot"></span>
-                            Disponible para proyectos
+                            <span data-i18n="hero.status">Disponible para proyectos</span>
                         </div>
                     </div>
                 </div>
@@ -94,15 +105,15 @@
     <!-- Sobre Mí -->
     <section id="sobre-mi" class="section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Sobre Mí</h2>
+            <h2 class="section-title" data-aos="fade-up" data-i18n="about.title">Sobre Mí</h2>
             <div class="about-content" data-aos="fade-up">
                 <div class="about-text">
-                    <p>
+                    <p data-i18n="about.p1">
                         Soy un profesional especializado en Cloud Computing (AWS y Azure), DevSecOps y Ciberseguridad 
                         con más de 4 años de experiencia en el sector tecnológico. Actualmente trabajo como Senior Cloud DevOps 
                         Engineer en CTAIMA, automatizando procesos y gestionando infraestructuras multi-cloud.
                     </p>
-                    <p>
+                    <p data-i18n="about.p2">
                         Mi experiencia incluye la gestión de CI/CD, contenedores (Docker, Kubernetes), orquestación con Ansible, 
                         desarrollo en Python y Golang, y seguridad con plataformas SOAR. Tengo un fuerte compromiso con el 
                         aprendizaje continuo, evidenciado por mis múltiples certificaciones en AWS y otras tecnologías cloud.
@@ -110,19 +121,19 @@
                     <div class="stats">
                         <div class="stat-item">
                             <div class="stat-number">4+</div>
-                            <div class="stat-label">Años de Experiencia</div>
+                            <div class="stat-label" data-i18n="about.stat1">Años de Experiencia</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">50+</div>
-                            <div class="stat-label">Proyectos Completados</div>
+                            <div class="stat-label" data-i18n="about.stat2">Proyectos Completados</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">15+</div>
-                            <div class="stat-label">Certificaciones</div>
+                            <div class="stat-label" data-i18n="about.stat3">Certificaciones</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">100%</div>
-                            <div class="stat-label">Satisfacción Cliente</div>
+                            <div class="stat-label" data-i18n="about.stat4">Satisfacción Cliente</div>
                         </div>
                     </div>
                 </div>
@@ -133,32 +144,48 @@
     <!-- Experiencia -->
     <section id="experiencia" class="section section-alt">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Experiencia Profesional</h2>
+            <h2 class="section-title" data-aos="fade-up" data-i18n="exp.title">Experiencia Profesional</h2>
             <div class="timeline">
                 <div class="timeline-item" data-aos="fade-right">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">Febrero 2025 - Actualidad</div>
-                        <h3>Senior Cloud DevOps Engineer</h3>
+                        <div class="timeline-date" data-i18n="exp.ctaima.date">Febrero 2025 - Actualidad</div>
+                        <h3 data-i18n="exp.ctaima.title">Senior Cloud DevOps Engineer</h3>
                         <h4>CTAIMA</h4>
                         <ul>
-                            <li>Automatización de procesos con pipelines en Azure DevOps</li>
-                            <li>Gestión de infraestructura cloud en AWS y Microsoft Azure</li>
-                            <li>Orquestación de contenedores con Kubernetes (AKS y EKS)</li>
-                            <li>Implementación de Amazon ECS para gestión de contenedores</li>
-                            <li>Monitorización y observabilidad con Prometheus y Grafana</li>
-                            <li>Gestión de herramientas Atlassian: JIRA, Confluence, Bitbucket</li>
-                            <li>CI/CD y automatización de despliegues multi-cloud</li>
+                            <li data-i18n="exp.ctaima.li1">Gestión de infraestructura multi-cloud en AWS y Microsoft Azure con IaC (CDK, CloudFormation, Terraform)</li>
+                            <li data-i18n="exp.ctaima.li2">Administración de servicios AWS: WAF, CloudWatch Alarms, ECS, ECR, Route53, VPC, Redshift, Glue</li>
+                            <li data-i18n="exp.ctaima.li3">Gestión de IAM en AWS y Azure para control de accesos y políticas de seguridad</li>
+                            <li data-i18n="exp.ctaima.li4">Automatización de procesos con pipelines en Azure DevOps y GitHub Actions</li>
+                            <li data-i18n="exp.ctaima.li5">Gestión y optimización de clusters Kubernetes (EKS y AKS)</li>
+                            <li data-i18n="exp.ctaima.li6">Automatización de backups con Commvault y S3</li>
+                            <li data-i18n="exp.ctaima.li7">Implementación de soluciones de análisis de datos con Redshift, Glue, Power BI y CDK</li>
+                            <li data-i18n="exp.ctaima.li8">Automatización de análisis de seguridad: SonarQube, Trivy, Veracode (SAST/DAST), OWASP ZAP, Aikido, Plandek</li>
+                            <li data-i18n="exp.ctaima.li9">Monitorización y observabilidad con Prometheus y Grafana</li>
+                            <li data-i18n="exp.ctaima.li10">Implementación de Bitwarden self-hosted con SSO Entra ID y backups automáticos (S3 + Commvault)</li>
+                            <li data-i18n="exp.ctaima.li11">Migración de servidor SFTP a AWS con análisis de seguridad completo (Veracode, SonarQube, Trivy, OWASP ZAP)</li>
+                            <li data-i18n="exp.ctaima.li12">Gestión de aplicaciones mediante CDK y diseño de Disaster Recovery Plans (DRP) para auditorías</li>
+                            <li data-i18n="exp.ctaima.li13">Automatización de backups RDS: MongoDB, PostgreSQL, MySQL, MariaDB, Aurora</li>
+                            <li data-i18n="exp.ctaima.li14">Gestión de herramientas Atlassian: JIRA, Confluence, Bitbucket</li>
+                            <li data-i18n="exp.ctaima.li15">Gestión de repositorios y CI/CD en GitHub Actions y Bitbucket Pipelines</li>
                         </ul>
                         <div class="timeline-tags">
-                            <span class="tag">Azure DevOps</span>
                             <span class="tag">AWS</span>
                             <span class="tag">Azure</span>
-                            <span class="tag">AKS</span>
-                            <span class="tag">EKS</span>
-                            <span class="tag">ECS</span>
+                            <span class="tag">CDK</span>
+                            <span class="tag">Terraform</span>
+                            <span class="tag">CloudFormation</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">ECS/ECR</span>
+                            <span class="tag">Azure DevOps</span>
+                            <span class="tag">GitHub Actions</span>
+                            <span class="tag">SonarQube</span>
+                            <span class="tag">Veracode</span>
                             <span class="tag">Prometheus</span>
                             <span class="tag">Grafana</span>
+                            <span class="tag">Commvault</span>
+                            <span class="tag">Redshift</span>
+                            <span class="tag">Power BI</span>
                         </div>
                     </div>
                 </div>
@@ -166,19 +193,19 @@
                 <div class="timeline-item" data-aos="fade-left">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">Noviembre 2022 - Febrero 2025</div>
-                        <h3>Senior DevSecOps Consultant</h3>
+                        <div class="timeline-date" data-i18n="exp.txofi.date">Noviembre 2022 - Febrero 2025</div>
+                        <h3 data-i18n="exp.txofi.title">Senior DevSecOps Consultant</h3>
                         <h4>Txofi</h4>
                         <ul>
-                            <li>Automatización de procesos haciendo uso de pipelines en Azure DevOps</li>
-                            <li>Gestión de CI/CD en Azure DevOps (Build y Deploy/Release Pipelines)</li>
-                            <li>Gestión y despliegue de aplicaciones ubicadas en la nube de AWS</li>
-                            <li>Despliegue de aplicaciones con contenedores: Kubernetes (EKS) y Docker</li>
-                            <li>CloudBees CI y CloudBees CD/RO</li>
-                            <li>Gestión y orquestación de configuración con Ansible (Playbooks)</li>
-                            <li>Uso de herramientas DevOps: GitLab, Bitbucket, Jira, Confluence</li>
-                            <li>Gestión de incidencias en Jenkins y SonarQube</li>
-                            <li>Presentación de demos a potenciales clientes</li>
+                            <li data-i18n="exp.txofi.li1">Automatización de procesos haciendo uso de pipelines en Azure DevOps</li>
+                            <li data-i18n="exp.txofi.li2">Gestión de CI/CD en Azure DevOps (Build y Deploy/Release Pipelines)</li>
+                            <li data-i18n="exp.txofi.li3">Gestión y despliegue de aplicaciones ubicadas en la nube de AWS</li>
+                            <li data-i18n="exp.txofi.li4">Despliegue de aplicaciones con contenedores: Kubernetes (EKS) y Docker</li>
+                            <li data-i18n="exp.txofi.li5">CloudBees CI y CloudBees CD/RO</li>
+                            <li data-i18n="exp.txofi.li6">Gestión y orquestación de configuración con Ansible (Playbooks)</li>
+                            <li data-i18n="exp.txofi.li7">Uso de herramientas DevOps: GitLab, Bitbucket, Jira, Confluence</li>
+                            <li data-i18n="exp.txofi.li8">Gestión de incidencias en Jenkins y SonarQube</li>
+                            <li data-i18n="exp.txofi.li9">Presentación de demos a potenciales clientes</li>
                         </ul>
                         <div class="timeline-tags">
                             <span class="tag">Azure DevOps</span>
@@ -195,16 +222,16 @@
                 <div class="timeline-item" data-aos="fade-right">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">Enero 2021 - Octubre 2022</div>
-                        <h3>Cyber Security Engineer</h3>
+                        <div class="timeline-date" data-i18n="exp.cipher.date">Enero 2021 - Octubre 2022</div>
+                        <h3 data-i18n="exp.cipher.title">Cyber Security Engineer</h3>
                         <h4>Cipher (Prosegur)</h4>
                         <ul>
-                            <li>Gestión y automatización de operaciones y respuestas de seguridad</li>
-                            <li>Desarrollo e implementación de Playbooks, Integraciones y Acciones en Siemplify SOAR</li>
-                            <li>DevOps and Threat Intelligence Analyst</li>
-                            <li>Desarrollo con servicios AWS: S3, DynamoDB, Lambda, Step Functions, Athena</li>
-                            <li>Desarrollo de aplicaciones web con Python y Django</li>
-                            <li>Uso de herramientas DevOps: Git, Docker, Bitbucket, Jira, Confluence</li>
+                            <li data-i18n="exp.cipher.li1">Gestión y automatización de operaciones y respuestas de seguridad</li>
+                            <li data-i18n="exp.cipher.li2">Desarrollo e implementación de Playbooks, Integraciones y Acciones en Siemplify SOAR</li>
+                            <li data-i18n="exp.cipher.li3">DevOps and Threat Intelligence Analyst</li>
+                            <li data-i18n="exp.cipher.li4">Desarrollo con servicios AWS: S3, DynamoDB, Lambda, Step Functions, Athena</li>
+                            <li data-i18n="exp.cipher.li5">Desarrollo de aplicaciones web con Python y Django</li>
+                            <li data-i18n="exp.cipher.li6">Uso de herramientas DevOps: Git, Docker, Bitbucket, Jira, Confluence</li>
                         </ul>
                         <div class="timeline-tags">
                             <span class="tag">Siemplify SOAR</span>
@@ -220,13 +247,13 @@
                 <div class="timeline-item" data-aos="fade-left">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">2018 - 2021</div>
-                        <h3>Vigilante de Seguridad</h3>
+                        <div class="timeline-date" data-i18n="exp.eulen.date">2018 - 2021</div>
+                        <h3 data-i18n="exp.eulen.title">Vigilante de Seguridad</h3>
                         <h4>Eulen</h4>
                         <ul>
-                            <li>Control de accesos y vigilancia de instalaciones</li>
-                            <li>Gestión de incidencias de seguridad</li>
-                            <li>Coordinación con equipos de seguridad</li>
+                            <li data-i18n="exp.eulen.li1">Control de accesos y vigilancia de instalaciones</li>
+                            <li data-i18n="exp.eulen.li2">Gestión de incidencias de seguridad</li>
+                            <li data-i18n="exp.eulen.li3">Coordinación con equipos de seguridad</li>
                         </ul>
                         <div class="timeline-tags">
                             <span class="tag">Seguridad</span>
@@ -241,46 +268,46 @@
     <!-- Educación -->
     <section id="educacion" class="section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Educación</h2>
+            <h2 class="section-title" data-aos="fade-up" data-i18n="edu.title">Educación</h2>
             <div class="education-grid">
                 <div class="education-card" data-aos="zoom-in">
                     <div class="education-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3>Máster en Inteligencia Artificial y Big Data</h3>
-                    <h4>Universidad Isabel I</h4>
-                    <p class="education-date">2022 - 2023</p>
-                    <p>Especialización en Machine Learning, Deep Learning y Análisis de Datos</p>
+                    <h3 data-i18n="edu.master.ai.title">Máster en Inteligencia Artificial y Big Data</h3>
+                    <h4 data-i18n="edu.master.ai.university">Universidad Isabel I</h4>
+                    <p class="education-date" data-i18n="edu.master.ai.date">2022 - 2023</p>
+                    <p data-i18n="edu.master.ai.desc">Especialización en Machine Learning, Deep Learning y Análisis de Datos</p>
                 </div>
 
                 <div class="education-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="education-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Máster en Ciberseguridad y Gestión de Riesgos</h3>
-                    <h4>Universidad Alfonso X el Sabio</h4>
-                    <p class="education-date">2020 - 2021</p>
-                    <p>Especialización en seguridad de la información y gestión de riesgos tecnológicos</p>
+                    <h3 data-i18n="edu.master.cyber.title">Máster en Ciberseguridad y Gestión de Riesgos</h3>
+                    <h4 data-i18n="edu.master.cyber.university">Universidad Alfonso X el Sabio</h4>
+                    <p class="education-date" data-i18n="edu.master.cyber.date">2020 - 2021</p>
+                    <p data-i18n="edu.master.cyber.desc">Especialización en seguridad de la información y gestión de riesgos tecnológicos</p>
                 </div>
 
                 <div class="education-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="education-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3>Grado en Ingeniería de Telecomunicaciones</h3>
-                    <h4>Universidad Politécnica de Madrid (UPM)</h4>
-                    <p class="education-date">3º curso</p>
-                    <p>Formación en sistemas de telecomunicaciones y tecnologías de la información</p>
+                    <h3 data-i18n="edu.degree.title">Grado en Ingeniería de Telecomunicaciones</h3>
+                    <h4 data-i18n="edu.degree.university">Universidad Politécnica de Madrid (UPM)</h4>
+                    <p class="education-date" data-i18n="edu.degree.date">3º curso</p>
+                    <p data-i18n="edu.degree.desc">Formación en sistemas de telecomunicaciones y tecnologías de la información</p>
                 </div>
 
                 <div class="education-card" data-aos="zoom-in" data-aos-delay="300">
                     <div class="education-icon">
                         <i class="fas fa-school"></i>
                     </div>
-                    <h3>Bachillerato Tecnológico</h3>
-                    <h4>Liceo Europeo, Madrid</h4>
-                    <p class="education-date">2011 - 2013</p>
-                    <p>Formación preuniversitaria con especialización tecnológica</p>
+                    <h3 data-i18n="edu.bachillerato.title">Bachillerato Tecnológico</h3>
+                    <h4 data-i18n="edu.bachillerato.university">Liceo Europeo, Madrid</h4>
+                    <p class="education-date" data-i18n="edu.bachillerato.date">2011 - 2013</p>
+                    <p data-i18n="edu.bachillerato.desc">Formación preuniversitaria con especialización tecnológica</p>
                 </div>
             </div>
         </div>
@@ -290,134 +317,134 @@
         <!-- Certificaciones -->
         <section id="certificaciones" class="section">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Certificaciones</h2>
-                <p class="section-subtitle" data-aos="fade-up">Haz clic en cada certificación para verificarla</p>
+                <h2 class="section-title" data-aos="fade-up" data-i18n="cert.title">Certificaciones</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-i18n="cert.subtitle">Haz clic en cada certificación para verificarla</p>
                 <div class="certifications-grid">
                     
                     <a href="https://www.credly.com/badges/daniel-rico-esteban" target="_blank" class="cert-card" data-aos="flip-left">
                         <div class="cert-icon">
-                            <img src="iconos/aws SA.png" alt="AWS Solutions Architect" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="assets/icons/aws SA.png" alt="AWS Solutions Architect" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3>AWS Certified Solutions Architect Associate</h3>
                         <p>Amazon Web Services</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://www.credly.com/badges/daniel-rico-esteban" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="100">
                         <div class="cert-icon">
-                            <img src="iconos/aws pract.png" alt="AWS Cloud Practitioner" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="assets/icons/aws pract.png" alt="AWS Cloud Practitioner" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3>AWS Certified Cloud Practitioner</h3>
                         <p>Amazon Web Services</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://www.credly.com/badges/daniel-rico-esteban" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="200">
                         <div class="cert-icon">
-                            <img src="iconos/aws storage.png" alt="AWS Storage" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="assets/icons/aws storage.png" alt="AWS Storage" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3>AWS Storage Technologist</h3>
                         <p>Amazon Web Services</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://www.credly.com/badges/daniel-rico-esteban" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="300">
                         <div class="cert-icon">
-                            <img src="iconos/aws core.png" alt="AWS Storage Core" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="assets/icons/aws core.png" alt="AWS Storage Core" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3>AWS Storage Core</h3>
                         <p>Amazon Web Services</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://www.credly.com/badges/daniel-rico-esteban" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="400">
                         <div class="cert-icon">
-                            <img src="iconos/aws serverless.png" alt="AWS Serverless" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="assets/icons/aws serverless.png" alt="AWS Serverless" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3>AWS Serverless Technologist</h3>
                         <p>Amazon Web Services</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://www.credly.com/badges/daniel-rico-esteban" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="500">
                         <div class="cert-icon">
-                            <img src="iconos/aws architecting.png" alt="AWS Architecting" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="assets/icons/aws architecting.png" alt="AWS Architecting" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3>AWS Architecting Technologist</h3>
                         <p>Amazon Web Services</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://www.credly.com/badges/daniel-rico-esteban" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="600">
                         <div class="cert-icon">
-                            <img src="iconos/aws dev games.png" alt="AWS Game Dev" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="assets/icons/aws dev games.png" alt="AWS Game Dev" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3>AWS Cloud Game Development</h3>
                         <p>Amazon Web Services</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://certificates.cloudbees.com/" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="700">
                         <div class="cert-icon">
-                            <img src="iconos/cloudbees ci.png" alt="CloudBees CI" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="assets/icons/cloudbees ci.png" alt="CloudBees CI" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3>CloudBees Certified - CI Essentials</h3>
                         <p>CloudBees</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://certificates.cloudbees.com/" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="800">
                         <div class="cert-icon">
-                            <img src="iconos/cloudbees cd.png" alt="CloudBees CD" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="assets/icons/cloudbees cd.png" alt="CloudBees CD" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3>CloudBees Certified - CD/RO Essentials</h3>
                         <p>CloudBees</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://www.credly.com/badges/daniel-rico-esteban" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="900">
                         <div class="cert-icon">
-                            <img src="iconos/aws technologist.png" alt="AWS Disaster Recovery" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="assets/icons/aws technologist.png" alt="AWS Disaster Recovery" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3>AWS Disaster Recovery Technologist</h3>
                         <p>Amazon Web Services</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://www.credly.com/badges/daniel-rico-esteban" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="1000">
                         <div class="cert-icon">
-                            <img src="iconos/aws migrate.png" alt="AWS Data Migration" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="assets/icons/aws migrate.png" alt="AWS Data Migration" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3>AWS Data Migration Technologist</h3>
                         <p>Amazon Web Services</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://www.credly.com/badges/daniel-rico-esteban" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="1100">
                         <div class="cert-icon">
-                            <img src="iconos/aws file.png" alt="AWS File Storage" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="assets/icons/aws file.png" alt="AWS File Storage" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3>AWS File Storage Technologist</h3>
                         <p>Amazon Web Services</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://www.credly.com/badges/daniel-rico-esteban" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="1200">
                         <div class="cert-icon">
-                            <img src="iconos/aws object.png" alt="AWS Object Storage" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="assets/icons/aws object.png" alt="AWS Object Storage" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3>AWS Object Storage Technologist</h3>
                         <p>Amazon Web Services</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://www.credly.com/badges/daniel-rico-esteban" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="1300">
                         <div class="cert-icon">
-                            <img src="iconos/aws block.png" alt="AWS Block Storage" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="assets/icons/aws block.png" alt="AWS Block Storage" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3>AWS Block Storage Technologist</h3>
                         <p>Amazon Web Services</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://www.siemplify.co/certification/" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="1400">
@@ -426,7 +453,7 @@
                         </div>
                         <h3>Siemplify SOAR Certified</h3>
                         <p>Analyst (SCSA), Developer (SCSD), Operator (SCSO)</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://www.udemy.com/certificate/" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="1500">
@@ -435,7 +462,7 @@
                         </div>
                         <h3>Golang - The Complete Developer's Guide</h3>
                         <p>Udemy</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                     <a href="https://www.udemy.com/certificate/" target="_blank" class="cert-card" data-aos="flip-left" data-aos-delay="1600">
@@ -444,7 +471,7 @@
                         </div>
                         <h3>The Jenkins Guide, From Zero to Expert</h3>
                         <p>Udemy</p>
-                        <div class="cert-badge">Verificar <i class="fas fa-external-link-alt"></i></div>
+                        <div class="cert-badge"><span data-i18n="cert.verify">Verificar</span> <i class="fas fa-external-link-alt"></i></div>
                     </a>
     
                 </div>
@@ -454,10 +481,10 @@
     <!-- Habilidades -->
     <section id="habilidades" class="section section-alt">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Habilidades Técnicas</h2>
+            <h2 class="section-title" data-aos="fade-up" data-i18n="skills.title">Habilidades Técnicas</h2>
             <div class="skills-grid">
                 <div class="skill-category" data-aos="fade-up">
-                    <h3><i class="fas fa-cloud"></i> Cloud Computing</h3>
+                    <h3><i class="fas fa-cloud"></i> <span data-i18n="skills.cloud">Cloud Computing</span></h3>
                     <div class="skills-list">
                         <div class="skill-item">
                             <div class="skill-info">
@@ -490,7 +517,7 @@
                 </div>
 
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                    <h3><i class="fas fa-code"></i> Programación</h3>
+                    <h3><i class="fas fa-code"></i> <span data-i18n="skills.programming">Programación</span></h3>
                     <div class="skills-list">
                         <div class="skill-item">
                             <div class="skill-info">
@@ -532,24 +559,33 @@
                 </div>
 
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3><i class="fas fa-truck"></i> DevOps & CI/CD</h3>
+                    <h3><i class="fas fa-truck"></i> <span data-i18n="skills.devops">DevOps & CI/CD</span></h3>
                     <div class="skills-list">
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Jenkins</span>
-                                <span>90%</span>
+                                <span>Azure DevOps</span>
+                                <span>95%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
+                                <div class="skill-progress" style="width: 95%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>CloudBees</span>
-                                <span>88%</span>
+                                <span>GitHub Actions</span>
+                                <span>92%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Jenkins / CloudBees</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
@@ -564,30 +600,39 @@
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span>Jira / Confluence</span>
-                                <span>85%</span>
+                                <span>90%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
+                                <div class="skill-progress" style="width: 90%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                    <h3><i class="fas fa-server"></i> Contenedores & Orquestación</h3>
+                    <h3><i class="fas fa-code-branch"></i> <span data-i18n="skills.iac">Infrastructure as Code (IaC)</span></h3>
                     <div class="skills-list">
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Docker</span>
-                                <span>95%</span>
+                                <span>AWS CDK</span>
+                                <span>92%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
+                                <div class="skill-progress" style="width: 92%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Kubernetes (EKS)</span>
+                                <span>Terraform</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>CloudFormation</span>
                                 <span>88%</span>
                             </div>
                             <div class="skill-bar">
@@ -603,24 +648,99 @@
                                 <div class="skill-progress" style="width: 90%"></div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="350">
+                    <h3><i class="fas fa-server"></i> <span data-i18n="skills.containers">Contenedores & Orquestación</span></h3>
+                    <div class="skills-list">
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Terraform</span>
-                                <span>82%</span>
+                                <span>Docker</span>
+                                <span>95%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 82%"></div>
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Kubernetes (EKS/AKS)</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Amazon ECS/ECR</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
-                    <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                    <h3><i class="fas fa-database"></i> <span data-i18n="skills.databases">Bases de Datos</span></h3>
                     <div class="skills-list">
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>SQL (PostgreSQL, MySQL)</span>
+                                <span>PostgreSQL / MySQL / MariaDB</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Amazon RDS / Aurora</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>MongoDB / DynamoDB</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="450">
+                    <h3><i class="fas fa-shield-alt"></i> <span data-i18n="skills.security">Seguridad & Análisis de Código</span></h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>SonarQube</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Veracode (SAST/DAST)</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Trivy / OWASP ZAP</span>
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
@@ -629,19 +749,13 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>NoSQL (MongoDB, DynamoDB)</span>
+                                <span>Aikido / Plandek</span>
                                 <span>82%</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 82%"></div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
-                    <h3><i class="fas fa-shield-alt"></i> Ciberseguridad</h3>
-                    <div class="skills-list">
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span>SOAR (Siemplify)</span>
@@ -651,9 +765,48 @@
                                 <div class="skill-progress" style="width: 90%"></div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                    <h3><i class="fas fa-chart-line"></i> <span data-i18n="skills.monitoring">Monitorización & Observabilidad</span></h3>
+                    <div class="skills-list">
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Security Operations</span>
+                                <span>Prometheus</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Grafana</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>CloudWatch / Azure Monitor</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="550">
+                    <h3><i class="fas fa-chart-bar"></i> <span data-i18n="skills.data">Data & Analytics</span></h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>AWS Redshift</span>
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
@@ -662,11 +815,53 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Threat Intelligence</span>
+                                <span>AWS Glue</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Power BI</span>
                                 <span>80%</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+                    <h3><i class="fas fa-hdd"></i> <span data-i18n="skills.backup">Backup & Disaster Recovery</span></h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Commvault</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>AWS Backup / S3 Lifecycle</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Disaster Recovery Plans (DRP)</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
                             </div>
                         </div>
                     </div>
@@ -678,7 +873,7 @@
     <!-- Proyectos -->
     <section id="proyectos" class="section section-alt">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Proyectos Destacados</h2>
+            <h2 class="section-title" data-aos="fade-up" data-i18n="proj.title">Proyectos Destacados</h2>
             <div class="projects-grid">
                 
                 <div class="project-card" data-aos="zoom-in">
@@ -691,8 +886,8 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Automatización de CI/CD Multi-Cloud</h3>
-                        <p>Implementación de pipelines de CI/CD completos en Azure DevOps para despliegues automatizados en AWS, utilizando contenedores y Kubernetes para aplicaciones empresariales.</p>
+                        <h3 data-i18n="proj.cicd.title">Automatización de CI/CD Multi-Cloud</h3>
+                        <p data-i18n="proj.cicd.desc">Implementación de pipelines de CI/CD completos en Azure DevOps para despliegues automatizados en AWS, utilizando contenedores y Kubernetes para aplicaciones empresariales.</p>
                         <div class="project-tags">
                             <span class="tag">Azure DevOps</span>
                             <span class="tag">AWS</span>
@@ -713,8 +908,8 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Plataforma SOAR de Seguridad</h3>
-                        <p>Desarrollo de Playbooks, integraciones y automatizaciones personalizadas en Siemplify para gestión de incidentes de seguridad y respuesta automatizada a amenazas.</p>
+                        <h3 data-i18n="proj.soar.title">Plataforma SOAR de Seguridad</h3>
+                        <p data-i18n="proj.soar.desc">Desarrollo de Playbooks, integraciones y automatizaciones personalizadas en Siemplify para gestión de incidentes de seguridad y respuesta automatizada a amenazas.</p>
                         <div class="project-tags">
                             <span class="tag">Siemplify</span>
                             <span class="tag">Python</span>
@@ -734,8 +929,8 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Infrastructure as Code</h3>
-                        <p>Gestión de infraestructura cloud con Ansible, Terraform y CloudFormation. Automatización de configuración de servidores, redes y servicios cloud para múltiples clientes.</p>
+                        <h3 data-i18n="proj.iac.title">Infrastructure as Code</h3>
+                        <p data-i18n="proj.iac.desc">Gestión de infraestructura cloud con Ansible, Terraform y CloudFormation. Automatización de configuración de servidores, redes y servicios cloud para múltiples clientes.</p>
                         <div class="project-tags">
                             <span class="tag">Ansible</span>
                             <span class="tag">Terraform</span>
@@ -755,8 +950,8 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Arquitectura de Microservicios</h3>
-                        <p>Diseño y desarrollo de aplicaciones web con arquitectura de microservicios usando Python/Django, desplegadas en contenedores Docker y orquestadas con Kubernetes en AWS EKS.</p>
+                        <h3 data-i18n="proj.microservices.title">Arquitectura de Microservicios</h3>
+                        <p data-i18n="proj.microservices.desc">Diseño y desarrollo de aplicaciones web con arquitectura de microservicios usando Python/Django, desplegadas en contenedores Docker y orquestadas con Kubernetes en AWS EKS.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Django</span>
@@ -776,8 +971,8 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Aplicaciones Serverless AWS</h3>
-                        <p>Desarrollo de herramientas y aplicaciones serverless utilizando AWS Lambda, Step Functions, DynamoDB, S3 y Athena para análisis de threat intelligence y automatización de seguridad.</p>
+                        <h3 data-i18n="proj.serverless.title">Aplicaciones Serverless AWS</h3>
+                        <p data-i18n="proj.serverless.desc">Desarrollo de herramientas y aplicaciones serverless utilizando AWS Lambda, Step Functions, DynamoDB, S3 y Athena para análisis de threat intelligence y automatización de seguridad.</p>
                         <div class="project-tags">
                             <span class="tag">AWS Lambda</span>
                             <span class="tag">Step Functions</span>
@@ -797,8 +992,8 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Herramientas CLI en Golang</h3>
-                        <p>Desarrollo de herramientas de línea de comandos y aplicaciones de alto rendimiento en Golang para automatización de tareas DevOps y gestión de infraestructura cloud.</p>
+                        <h3 data-i18n="proj.golang.title">Herramientas CLI en Golang</h3>
+                        <p data-i18n="proj.golang.desc">Desarrollo de herramientas de línea de comandos y aplicaciones de alto rendimiento en Golang para automatización de tareas DevOps y gestión de infraestructura cloud.</p>
                         <div class="project-tags">
                             <span class="tag">Golang</span>
                             <span class="tag">CLI</span>
@@ -815,8 +1010,8 @@
     <!-- Contacto -->
     <section id="contacto" class="section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">¿Hablamos?</h2>
-            <p class="section-subtitle" data-aos="fade-up">Estoy disponible para nuevos proyectos y oportunidades</p>
+            <h2 class="section-title" data-aos="fade-up" data-i18n="contact.title">¿Hablamos?</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-i18n="contact.subtitle">Estoy disponible para nuevos proyectos y oportunidades</p>
             
             <div class="contact-content">
                 <div class="contact-info" data-aos="fade-right">
@@ -825,7 +1020,7 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>Email</h3>
+                            <h3 data-i18n="contact.email">Email</h3>
                             <a href="mailto:daniricoesteban95@gmail.com">daniricoesteban95@gmail.com</a>
                         </div>
                     </div>
@@ -835,7 +1030,7 @@
                             <i class="fas fa-phone"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>Teléfono</h3>
+                            <h3 data-i18n="contact.phone">Teléfono</h3>
                             <a href="tel:+34689494997">+34 689 49 49 97</a>
                         </div>
                     </div>
@@ -845,8 +1040,8 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>Ubicación</h3>
-                            <p>Madrid, España</p>
+                            <h3 data-i18n="contact.location">Ubicación</h3>
+                            <p data-i18n="contact.location.value">Madrid, España</p>
                         </div>
                     </div>
 
@@ -855,7 +1050,7 @@
                             <i class="fas fa-birthday-cake"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>Fecha de Nacimiento</h3>
+                            <h3 data-i18n="contact.birth">Fecha de Nacimiento</h3>
                             <p>09/09/1995</p>
                         </div>
                     </div>
@@ -878,23 +1073,23 @@
 
                 <form class="contact-form" data-aos="fade-left">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" required>
-                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required data-i18n="contact.form.name" placeholder="Nombre">
+                        <label for="name" data-i18n="contact.form.name">Nombre</label>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required placeholder="Email">
                         <label for="email">Email</label>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" required>
-                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" name="subject" required data-i18n="contact.form.subject" placeholder="Asunto">
+                        <label for="subject" data-i18n="contact.form.subject">Asunto</label>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required data-i18n="contact.form.message" placeholder="Mensaje"></textarea>
+                        <label for="message" data-i18n="contact.form.message">Mensaje</label>
                     </div>
                     <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        <i class="fas fa-paper-plane"></i> <span data-i18n="contact.form.submit">Enviar Mensaje</span>
                     </button>
                 </form>
             </div>
@@ -904,9 +1099,9 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Daniel Rico Esteban. Todos los derechos reservados.</p>
-            <p>Senior Cloud DevOps Engineer | AWS & Azure Specialist</p>
-            <p>Diseñado y desarrollado con <i class="fas fa-heart"></i> y <i class="fab fa-aws"></i></p>
+            <p>&copy; 2024 Daniel Rico Esteban. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+            <p data-i18n="footer.role">Senior Cloud DevOps Engineer | AWS & Azure Specialist</p>
+            <p><span data-i18n="footer.designed">Diseñado y desarrollado con</span> <i class="fas fa-heart"></i> y <i class="fab fa-aws"></i></p>
         </div>
     </footer>
 
