@@ -1444,25 +1444,61 @@ body {
 @media (max-width: 968px) {
     .hamburger {
         display: flex;
+        z-index: 1001;
+        padding: 10px;
+        border-radius: 8px;
+        transition: var(--transition);
+    }
+
+    .hamburger:active {
+        background: rgba(74, 144, 226, 0.2);
     }
 
     .nav-controls {
         margin-right: 1rem;
+        gap: 0.75rem;
+    }
+
+    .theme-toggle,
+    .lang-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
     }
 
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 90px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 90px);
         background: rgba(15, 20, 25, 0.98);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(15px);
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 2rem;
+        justify-content: flex-start;
+        padding-top: 3rem;
+        gap: 1.5rem;
         transition: var(--transition);
+        overflow-y: auto;
+    }
+
+    .nav-link {
+        font-size: 1.3rem;
+        padding: 1rem 2rem;
+        border-radius: 15px;
+        width: 80%;
+        text-align: center;
+        background: rgba(74, 144, 226, 0.05);
+        border: 2px solid transparent;
+        transition: var(--transition);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background: rgba(74, 144, 226, 0.15);
+        border-color: var(--primary-color);
+        transform: scale(1.05);
     }
 
     [data-theme="light"] .nav-menu {
@@ -1473,10 +1509,16 @@ body {
         left: 0;
     }
 
+    /* HERO SECTION - Mucho más impactante */
+    .hero {
+        min-height: 90vh;
+        padding-top: 100px;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 2rem;
+        gap: 3rem;
     }
 
     .hero-text {
@@ -1487,55 +1529,604 @@ body {
         order: 1;
     }
 
+    /* Imagen de perfil más grande y destacada */
+    .profile-card {
+        padding: 2rem;
+        border-width: 3px;
+        box-shadow: 0 25px 80px rgba(74, 144, 226, 0.4);
+    }
+
+    .profile-image {
+        width: 280px;
+        height: 280px;
+        margin-bottom: 2rem;
+        border: 6px solid var(--primary-color);
+        box-shadow: 0 25px 70px rgba(74, 144, 226, 0.5);
+    }
+
+    .profile-status {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.1rem;
+        box-shadow: 0 10px 30px rgba(46, 204, 113, 0.4);
+    }
+
+    .status-dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    /* Títulos más impactantes */
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        letter-spacing: -0.03em;
+    }
+
+    .hero-subtitle {
+        font-size: 1.35rem;
+        margin-bottom: 2rem;
+        line-height: 1.4;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 3rem;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    /* Botones CTA más grandes y destacados */
     .hero-buttons {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        gap: 1.5rem;
     }
 
     .hero-buttons .btn {
         width: 100%;
-        max-width: 280px;
+        max-width: 320px;
+        padding: 1.4rem 2rem;
+        font-size: 1.15rem;
+        box-shadow: 0 10px 40px rgba(74, 144, 226, 0.5);
     }
 
+    .btn-secondary {
+        box-shadow: 0 8px 30px rgba(74, 144, 226, 0.3);
+    }
+
+    /* Social links más prominentes */
     .social-links {
         justify-content: center;
+        gap: 1.5rem;
+        margin-top: 2rem;
     }
 
+    .social-link {
+        width: 65px;
+        height: 65px;
+        font-size: 1.5rem;
+        border-width: 3px;
+        box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+    }
+
+    /* Navbar más compacto */
+    .nav-profile-img {
+        width: 75px;
+        height: 75px;
+        border-width: 3px;
+    }
+
+    .navbar.scrolled .nav-profile-img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .navbar .container {
+        min-height: 100px;
+        padding: 1rem 20px;
+    }
+
+    .navbar.scrolled .container {
+        min-height: 70px;
+        padding: 0.7rem 20px;
+    }
+
+    /* Secciones con mejor espaciado */
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.15rem;
+        margin-bottom: 3rem;
+        padding: 0 1rem;
+    }
+
+    /* STATS más visual */
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .stat-item {
+        padding: 2rem 1.5rem;
+        border-radius: 20px;
+        background: rgba(74, 144, 226, 0.08);
+        border: 2px solid rgba(74, 144, 226, 0.2);
+        box-shadow: 0 10px 30px rgba(74, 144, 226, 0.15);
+    }
+
+    .stat-number {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+    }
+
+    /* ABOUT section mejor estructurada */
+    .about-text {
+        padding: 2.5rem;
+        border-radius: 25px;
+        border-width: 2px;
+    }
+
+    .about-text p {
+        font-size: 1.05rem;
+        line-height: 1.9;
+        margin-bottom: 2rem;
+    }
+
+    /* TIMELINE mejorado */
+    .timeline::before {
+        left: 20px;
+        width: 3px;
+    }
+
+    .timeline-item {
+        margin-bottom: 3rem;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        width: calc(100% - 50px);
+        margin-left: 50px;
+    }
+
+    .timeline-marker {
+        left: 11px;
+        width: 18px;
+        height: 18px;
+        border-width: 3px;
+    }
+
+    .timeline-content {
+        padding: 2rem;
+        border-radius: 20px;
+        border-width: 2px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .timeline-content h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .timeline-content li {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 0.8rem;
+    }
+
+    .timeline-date {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* EDUCACIÓN cards más atractivas */
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .education-card {
+        padding: 2.5rem;
+        border-radius: 25px;
+        border-width: 2px;
+    }
+
+    .education-icon {
+        width: 90px;
+        height: 90px;
+        border-radius: 25px;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .education-card h3 {
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+
+    .education-card h4 {
+        font-size: 1.05rem;
+    }
+
+    /* CERTIFICACIONES más visuales */
+    .certifications-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .cert-card {
+        padding: 2.5rem 2rem;
+        border-radius: 25px;
+        border-width: 2px;
+    }
+
+    .cert-icon {
+        width: 110px;
+        height: 110px;
+        border-radius: 25px;
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .cert-card h3 {
+        font-size: 1.35rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+    }
+
+    .cert-card p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cert-badge {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* HABILIDADES mejor visualización */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .skill-category {
+        padding: 2.5rem;
+        border-radius: 25px;
+        border-width: 2px;
+    }
+
+    .skill-category h3 {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .skill-info {
+        font-size: 1.05rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .skill-bar {
+        height: 12px;
+        border-radius: 12px;
+    }
+
+    /* PROYECTOS optimizados */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .project-card {
+        border-radius: 25px;
+        border-width: 2px;
+    }
+
+    .project-image {
+        height: 220px;
+    }
+
+    .project-content {
+        padding: 2.5rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+    }
+
+    .project-content p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+
+    .tag {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
+        border-radius: 25px;
+        border-width: 2px;
+    }
+
+    /* CONTACTO mejorado */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contact-item {
+        padding: 2rem;
+        border-radius: 20px;
+        border-width: 2px;
+    }
+
+    .contact-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+        font-size: 1.8rem;
+    }
+
+    .contact-details h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-details a,
+    .contact-details p {
+        font-size: 1.05rem;
+    }
+
+    .contact-social {
+        padding: 2rem;
+        border-radius: 20px;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .contact-social .social-link {
+        width: 60px;
+        height: 60px;
+        font-size: 1.4rem;
+    }
+
+    .contact-form {
+        padding: 2.5rem;
+        border-radius: 25px;
+        border-width: 2px;
+    }
+
+    .form-group {
+        margin-bottom: 2rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 1.2rem;
+        font-size: 1.05rem;
+        border-radius: 15px;
+        border-width: 2px;
+    }
+
+    .contact-form .btn {
+        padding: 1.4rem 2rem;
+        font-size: 1.15rem;
+    }
+
+    /* Scroll to top button más accesible */
+    .scroll-top {
+        width: 60px;
+        height: 60px;
+        font-size: 1.4rem;
+        bottom: 25px;
+        right: 25px;
+        box-shadow: 0 10px 40px rgba(74, 144, 226, 0.5);
+    }
+}
+
+@media (max-width: 576px) {
+    /* Navbar ultra compacto */
+    .navbar .container {
+        min-height: 85px;
+        padding: 0.8rem 15px;
+    }
+
+    .navbar.scrolled .container {
+        min-height: 65px;
+        padding: 0.6rem 15px;
+    }
+
+    .nav-brand {
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+    }
+
+    .nav-profile-img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .navbar.scrolled .nav-profile-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav-controls {
+        margin-right: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .theme-toggle,
+    .lang-toggle {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.9rem 1.5rem;
+    }
+
+    /* HERO ultra optimizado para móvil pequeño */
+    .hero {
+        min-height: 85vh;
+        padding-top: 90px;
+    }
+
+    .hero-content {
+        gap: 2.5rem;
+    }
+
+    /* Imagen perfil aún más destacada en móvil pequeño */
+    .profile-card {
+        padding: 1.8rem;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 1.8rem;
+        border-width: 5px;
+    }
+
+    .profile-status {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .status-dot {
+        width: 11px;
+        height: 11px;
+    }
+
+    /* Títulos optimizados */
     .hero-title {
         font-size: 2.2rem;
-        line-height: 1.3;
+        line-height: 1.25;
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
     }
 
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+        padding: 0 0.5rem;
     }
 
     .hero-description {
         font-size: 1rem;
+        line-height: 1.75;
+        margin-bottom: 2.5rem;
+        padding: 0 0.5rem;
     }
 
-    .profile-image {
-        width: 240px;
-        height: 240px;
+    /* Botones CTA súper destacados */
+    .hero-buttons {
+        gap: 1.2rem;
+        padding: 0 0.5rem;
     }
 
-    .nav-profile-img {
-        width: 80px;
-        height: 80px;
+    .hero-buttons .btn {
+        max-width: 100%;
+        padding: 1.3rem 1.8rem;
+        font-size: 1.1rem;
     }
 
-    .navbar.scrolled .nav-profile-img {
+    .btn {
+        padding: 1.1rem 1.8rem;
+        font-size: 1rem;
+    }
+
+    /* Social links optimizados */
+    .social-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+    }
+
+    .social-link {
         width: 60px;
         height: 60px;
+        font-size: 1.4rem;
     }
 
+    /* Secciones más compactas pero legibles */
     .section {
-        padding: 60px 0;
+        padding: 50px 0;
     }
 
+    .section-title {
+        font-size: 2.3rem;
+        margin-bottom: 1.2rem;
+        padding: 0 0.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 2.5rem;
+        padding: 0 0.5rem;
+    }
+
+    /* Stats en columna única pero más impactantes */
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+        padding: 0 0.5rem;
+    }
+
+    .stat-item {
+        padding: 2rem 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.95rem;
+    }
+
+    /* About más legible */
+    .about-text {
+        padding: 2rem 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    /* Timeline más compacto */
     .timeline::before {
-        left: 0;
+        left: 15px;
+    }
+
+    .timeline-marker {
+        left: 8px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .timeline-item {
+        margin-bottom: 2.5rem;
     }
 
     .timeline-item:nth-child(odd) .timeline-content,
@@ -1544,87 +2135,383 @@ body {
         margin-left: 40px;
     }
 
-    .timeline-marker {
-        left: 0;
+    .timeline-content {
+        padding: 1.8rem;
     }
 
-    .stats {
-        grid-template-columns: repeat(2, 1fr);
+    .timeline-content h3 {
+        font-size: 1.25rem;
     }
 
-    .contact-content {
-        grid-template-columns: 1fr;
-    }
-
-    .education-grid,
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-title {
-        font-size: 1.8rem;
-        line-height: 1.3;
-    }
-
-    .hero-subtitle {
+    .timeline-content h4 {
         font-size: 1rem;
     }
 
-    .hero-description {
+    .timeline-content li {
+        font-size: 0.9rem;
+        line-height: 1.65;
+    }
+
+    /* Educación optimizada */
+    .education-grid {
+        gap: 2rem;
+    }
+
+    .education-card {
+        padding: 2rem 1.8rem;
+    }
+
+    .education-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2.2rem;
+    }
+
+    .education-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .education-card h4,
+    .education-card p {
         font-size: 0.95rem;
     }
 
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .section {
-        padding: 40px 0;
-    }
-
-    .stats {
+    /* Certificaciones compactas */
+    .certifications-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.8rem;
     }
 
-    .profile-image {
-        width: 200px;
+    .cert-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .cert-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cert-card h3 {
+        font-size: 1.2rem;
+        line-height: 1.35;
+    }
+
+    .cert-card p {
+        font-size: 0.95rem;
+    }
+
+    .cert-badge {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.95rem;
+    }
+
+    /* Habilidades optimizadas */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+    }
+
+    .skill-category {
+        padding: 2rem;
+    }
+
+    .skill-category h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .skill-info {
+        font-size: 1rem;
+    }
+
+    .skill-bar {
+        height: 11px;
+    }
+
+    /* Proyectos optimizados */
+    .projects-grid {
+        gap: 2rem;
+    }
+
+    .project-card {
+        border-radius: 22px;
+    }
+
+    .project-image {
         height: 200px;
     }
 
-    .certifications-grid,
-    .skills-grid {
-        grid-template-columns: 1fr;
+    .project-content {
+        padding: 2rem;
     }
 
-    .hero-buttons {
-        gap: 1rem;
+    .project-content h3 {
+        font-size: 1.35rem;
+        margin-bottom: 1.2rem;
     }
 
-    .btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.95rem;
+    .project-content p {
+        font-size: 1rem;
+        line-height: 1.7;
     }
 
-    .nav-profile-img {
-        width: 70px;
-        height: 70px;
+    .tag {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 
-    .navbar.scrolled .nav-profile-img {
+    /* Contacto optimizado */
+    .contact-content {
+        gap: 2.5rem;
+    }
+
+    .contact-item {
+        padding: 1.8rem;
+    }
+
+    .contact-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 1.6rem;
+    }
+
+    .contact-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-details a,
+    .contact-details p {
+        font-size: 1rem;
+    }
+
+    .contact-social {
+        padding: 1.8rem;
+        gap: 1.2rem;
+    }
+
+    .contact-social .social-link {
         width: 55px;
         height: 55px;
-    }
-
-    .hero-title {
-        font-size: 1.8rem;
-    }
-
-    .nav-brand {
         font-size: 1.3rem;
-        margin-right: 1rem;
+    }
+
+    .contact-form {
+        padding: 2rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.8rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 1.1rem;
+        font-size: 1rem;
+    }
+
+    .contact-form .btn {
+        padding: 1.3rem 1.8rem;
+        font-size: 1.1rem;
+    }
+
+    /* Scroll to top accesible */
+    .scroll-top {
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* Container con mejor padding */
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Breakpoint adicional para tablets en landscape */
+@media (max-width: 768px) and (min-width: 577px) {
+    /* Hero optimizado para tablet */
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .profile-image {
+        width: 260px;
+        height: 260px;
+    }
+
+    /* Stats en 2 columnas para tablet */
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* Certificaciones en 2 columnas para mejor uso del espacio */
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* Skills en 2 columnas para tablet */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Mejoras adicionales para móvil - Touch optimizations */
+@media (max-width: 968px) {
+    /* Botones más fáciles de presionar en touch */
+    .btn,
+    .social-link,
+    .nav-link,
+    .cert-card,
+    .project-card,
+    .contact-item,
+    .scroll-top {
+        -webkit-tap-highlight-color: rgba(74, 144, 226, 0.2);
+        touch-action: manipulation;
+    }
+
+    /* Mejora la legibilidad en móviles */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+
+    /* Espacios touch-friendly para links */
+    a, button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Hero subtitle con línea inferior más visible en móvil */
+    .hero-subtitle::after {
+        width: 80%;
+        height: 4px;
+        bottom: -10px;
+    }
+
+    /* Timeline tags con mejor wrap en móvil */
+    .timeline-tags {
+        justify-content: center;
+    }
+
+    .project-tags {
+        justify-content: center;
+    }
+
+    /* Footer más espaciado en móvil */
+    .footer {
+        padding: 3rem 0 2rem;
+        text-align: center;
+    }
+
+    .footer p {
+        margin: 0.8rem 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Mejora visual de los iconos en mobile */
+    .education-icon,
+    .contact-icon,
+    .cert-icon {
+        box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+    }
+
+    /* Animación de entrada más suave en móvil */
+    [data-aos] {
+        transition-duration: 600ms;
+    }
+
+    /* Asegurar que los hover effects se vean bien en mobile */
+    .cert-card:active,
+    .project-card:active,
+    .education-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+
+    /* Mejorar el menú hamburguesa visual */
+    .hamburger span {
+        width: 28px;
+        height: 3px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, var(--text-color), var(--primary-color));
+    }
+
+    /* Profile ring más visible en móvil */
+    .profile-ring {
+        border-width: 4px;
+        animation: rotate 8s linear infinite;
+    }
+
+    /* Status badge más prominente */
+    .profile-status {
+        animation: pulse-glow 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse-glow {
+        0%, 100% {
+            box-shadow: 0 5px 20px rgba(46, 204, 113, 0.3);
+        }
+        50% {
+            box-shadow: 0 10px 40px rgba(46, 204, 113, 0.6);
+        }
+    }
+
+    /* Mejor contraste para texto en cards en móvil */
+    .timeline-content,
+    .education-card,
+    .skill-category,
+    .cert-card,
+    .project-card,
+    .contact-item,
+    .about-text {
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Sección idiomas optimizada (aunque no está en el HTML, por si se agrega) */
+    #idiomas .skill-item {
+        padding: 1.5rem;
+        background: rgba(74, 144, 226, 0.05);
+        border-radius: 15px;
+        border: 2px solid rgba(74, 144, 226, 0.15);
+    }
+}
+
+/* Extra mejoras para tema claro en móvil */
+@media (max-width: 968px) {
+    [data-theme="light"] .hero-title {
+        text-shadow: 0 2px 20px rgba(99, 102, 241, 0.2);
+    }
+
+    [data-theme="light"] .profile-card {
+        box-shadow: 0 25px 80px rgba(99, 102, 241, 0.25);
+    }
+
+    [data-theme="light"] .social-link {
+        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+    }
+
+    [data-theme="light"] .btn-primary {
+        box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
+    }
+
+    [data-theme="light"] .stat-item,
+    [data-theme="light"] .education-card,
+    [data-theme="light"] .cert-card,
+    [data-theme="light"] .project-card {
+        box-shadow: 0 10px 35px rgba(99, 102, 241, 0.15);
     }
 }
 
